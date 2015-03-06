@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder {
 
 		$this->call('UserTableSeeder');
         $this->call('TaskTableSeeder');
+        $this->call('TaskTableSeeder');
 	}
 
 }
@@ -35,6 +36,11 @@ class UserTableSeeder extends Seeder {
     }
 }
 
+/**
+ * Seeds tasks table
+ *
+ * Class TaskTableSeeder
+ */
 class TaskTableSeeder extends Seeder {
 
     public function run()
@@ -47,3 +53,22 @@ class TaskTableSeeder extends Seeder {
         Task::create(['title'=>'Whatever', 'body'=>'Whatever and some more', 'user_id'=>1]);
     }
 }
+
+/**
+ * Seeds tags table
+ *
+ * Class TagTableSeeder
+ */
+class TagTableSeeder extends Seeder {
+
+    public function run()
+    {
+        // Delete tasks table records
+        DB::table('tags')->delete();
+
+        // Populate with dummy info
+        Task::create(['name'=>'sports']);
+        Task::create(['name'=>'study']);
+    }
+}
+
