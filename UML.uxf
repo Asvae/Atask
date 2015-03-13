@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>410</x>
-      <y>300</y>
+      <x>290</x>
+      <y>330</y>
       <w>120</w>
       <h>130</h>
     </coordinates>
@@ -22,8 +22,8 @@ timestamps</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>640</x>
-      <y>300</y>
+      <x>520</x>
+      <y>330</y>
       <w>120</w>
       <h>150</h>
     </coordinates>
@@ -41,8 +41,8 @@ integer user_id
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
-      <y>300</y>
+      <x>400</x>
+      <y>330</y>
       <w>140</w>
       <h>30</h>
     </coordinates>
@@ -52,8 +52,8 @@ integer user_id
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>800</x>
-      <y>300</y>
+      <x>680</x>
+      <y>330</y>
       <w>120</w>
       <h>90</h>
     </coordinates>
@@ -67,8 +67,8 @@ timestamps</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>730</x>
-      <y>480</y>
+      <x>610</x>
+      <y>510</y>
       <w>120</w>
       <h>130</h>
     </coordinates>
@@ -85,8 +85,8 @@ timestamps</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
-      <y>440</y>
+      <x>560</x>
+      <y>470</y>
       <w>90</w>
       <h>60</h>
     </coordinates>
@@ -96,8 +96,8 @@ timestamps</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>820</x>
-      <y>380</y>
+      <x>700</x>
+      <y>410</y>
       <w>60</w>
       <h>120</h>
     </coordinates>

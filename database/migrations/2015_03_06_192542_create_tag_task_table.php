@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTagTaskPivotTable extends Migration {
+class CreateTagTaskTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,7 @@ class CreateTagTaskPivotTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('tag_task', function(Blueprint $table)
+		Schema::create('tag_task', function(Blueprint $table)
 		{
             $table->increments('id');
             $table->timestamps();

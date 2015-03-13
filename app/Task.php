@@ -4,6 +4,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
     protected $fillable
         = [
             'title',
@@ -36,6 +41,15 @@ class Task extends Model
     public function user()
     {
         return $this->belongsTo('Laravel_test\User');
+    }
+
+    /**
+     * Task has many tags
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function tag(){
+        return $this->belongsToMany('Laravel_test\Tag');
     }
 
 }

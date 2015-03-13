@@ -12,7 +12,7 @@ class CreateTagsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('tags', function(Blueprint $table)
+		Schema::create('tags', function(Blueprint $table)
 		{
             $table->increments('id');
             $table->string('name');
