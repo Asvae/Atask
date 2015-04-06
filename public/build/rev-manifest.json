@@ -1,3 +1,5 @@
 {
-  "css/all.css": "css/all-c5e17ecc.css"
+  "css/app.css": "css/app-eee424cc.css",
+  "js/vendor.js": "js/vendor-e23131ae.js",
+  "js/all.js": "js/all-9adf6674.js"
 }

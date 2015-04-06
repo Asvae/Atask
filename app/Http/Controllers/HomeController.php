@@ -20,7 +20,7 @@ class HomeController extends Controller {
 	 */
 	public function __construct()
 	{
-		$this->middleware('auth');
+//		$this->middleware('auth');
 	}
 
 	/**
@@ -33,4 +33,18 @@ class HomeController extends Controller {
 		return view('home');
 	}
 
+    /**
+     * Bootstrap demo
+     *
+     * @return \Illuminate\View\View
+     */
+    public function bootstrap_demo()
+    {
+        return view('bootstrap_demo');
+    }
+
+    public function phpinformation()
+    {
+        phpinfo();
+    }
 }

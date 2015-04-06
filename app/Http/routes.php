@@ -11,16 +11,28 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-
 Route::get('about', 'PagesController@about');
+
+// usage inside a laravel route
+Route::get('image', function()
+{
+    $image_path = base_path().'/resources/images/';
+    $img = Image::make($image_path.'foo.jpg')
+        ->resize(null, 200, function ($constraint) {
+            $constraint->aspectRatio();
+        });
+
+    return $img->response('jpg');
+});
 
 Route::get('contact', 'PagesController@contact');
 
 Route::get('tasks/db', ['middleware' => 'auth', 'uses' => 'TasksController@showAll']);
 Route::resource('tasks','TasksController');
 
-Route::get('home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
+Route::get('demo', 'HomeController@bootstrap_demo');
+Route::get('phpinformation', 'HomeController@phpinformation');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

@@ -13,9 +13,34 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
 
-    mix.less('app.less');
+    var paths = {
+        'jquery': './vendor/bower_components/jquery/',
+        'bootstrap': './vendor/bower_components/bootstrap-sass-official/assets/',
+        'font_awesome': './vendor/bower_components/font-awesome/'
+    }
 
-    mix.styles(['vendor/normalize.css', 'app.css'], null, 'public/css');
+    var paths_js = [
+        paths.jquery + "dist/jquery.js",
+        paths.bootstrap + "javascripts/bootstrap.js",
+    ]
 
-    mix.version('public/css/all.css');
+    var paths_scss = [
+        paths.bootstrap + 'stylesheets/',
+        "sass/bootstrap_grey/",
+        paths.font_awesome + 'scss/',
+    ]
+
+    var paths_fonts = [
+        paths.bootstrap + 'fonts/bootstrap/**',
+        paths.font_awesome + 'fonts/**',
+    ]
+
+    elixir(function(mix) {
+        mix.sass("app.scss", 'public/css/', {includePaths: paths_scss})
+            .copy(paths_fonts, 'public/fonts')
+            .scripts( paths_js, 'public/js/vendor.js', './')
+            .scripts( 'script.js')
+            .version(["public/css/app.css","public/js/vendor.js", "public/js/all.js"]);
+    });
+
 });

@@ -137,6 +137,7 @@ return [
 		'Illuminate\View\ViewServiceProvider',
         'Illuminate\Html\HtmlServiceProvider',
         'Laracasts\Generators\GeneratorsServiceProvider',
+        'Intervention\Image\ImageServiceProvider',
 
 		/*
 		 * Application Service Providers...
@@ -195,8 +196,8 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
         'Form'      => 'Illuminate\Html\FormFacade',
-        'Html'      => 'Illuminate\Html\HtmlFacade',
-
+        'HTML'      => 'Illuminate\Html\HtmlFacade',
+        'Image'     => 'Intervention\Image\Facades\Image',
 	],
 
 ];

@@ -1,9 +1,45 @@
-body {
-  padding-top: 40px;
-  background-color: #0097d5;
+@import "bootstrap_cerulean/variables";
+
+@import "bootstrap";
+@import "bootstrap_cerulean/bootswatch";
+
+$fa-font-path: "../../fonts";
+@import "font-awesome";
+
+@import "skills-diagram";
+@import "long_shadow";
+
+div.other-skills div{
+  min-height: 118px;
 }
 
-body, label, .checkbox label {
-  font-weight: 200;
-  color: #131313;
+$shadow-primary: scale_color($brand-primary, $hue: 2%);
+
+div.social-buttons{
+  button{
+    color: $brand-primary;
+    overflow: hidden;
+
+    &:hover{
+      text-decoration: none;
+      color: $brand-primary;
+      @include longshadow(lighten($shadow-primary, 30%));
+    }
+  }
 }
+
+.jumbotron {
+  background-color: $brand-primary;
+  color: $body-bg;
+  overflow: hidden;
+
+  h1{
+    @include longshadow($shadow-primary);
+  }
+
+  *{
+    color: inherit;
+  }
+}
+
+
